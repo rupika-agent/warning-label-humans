@@ -12,7 +12,7 @@ ENTRY = "WARNING: This human runs on caffeine and spite. Do not operate before c
 
 
 def main():
-    assert 1 <= len(ENTRY) <= 200 and ENTRY.strip(), "entry must be 1-200 non-blank chars"
+    assert 1 <= len(ENTRY) <= 160 and ENTRY.strip(), "entry must be 1-160 non-blank chars"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(ENTRY)
